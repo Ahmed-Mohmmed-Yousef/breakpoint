@@ -24,6 +24,7 @@
 		24C6569122EF4DF300D344CF /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C6569022EF4DF300D344CF /* MeVC.swift */; };
 		24C6569322EF550300D344CF /* CreatPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C6569222EF550300D344CF /* CreatPostVC.swift */; };
 		24C6569522EF615400D344CF /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C6569422EF615400D344CF /* UIViewExt.swift */; };
+		24C6569722EF69AF00D344CF /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C6569622EF69AF00D344CF /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		24C6569022EF4DF300D344CF /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		24C6569222EF550300D344CF /* CreatPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatPostVC.swift; sourceTree = "<group>"; };
 		24C6569422EF615400D344CF /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		24C6569622EF69AF00D344CF /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		BBF309BF773896E2B4E7EAA9 /* Pods-breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.debug.xcconfig"; path = "Target Support Files/Pods-breakpoint/Pods-breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB2480A531396A54AC30769 /* Pods_breakpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 			children = (
 				24C6568A22EEDE4400D344CF /* InsetTextField.swift */,
 				24C6568C22EEE47000D344CF /* ShadowView.swift */,
+				24C6569622EF69AF00D344CF /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24C6569522EF615400D344CF /* UIViewExt.swift in Sources */,
+				24C6569722EF69AF00D344CF /* FeedCell.swift in Sources */,
 				24C6569122EF4DF300D344CF /* MeVC.swift in Sources */,
 				24C6568722EEDDF100D344CF /* AuthVC.swift in Sources */,
 				2429961422EDFBDC000DE8E7 /* SecondViewController.swift in Sources */,
