@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 class AuthService{
-    static let authService = AuthService()
+    static let instance = AuthService()
     
     func registerUSer(withEmial email: String, Password password: String, creationCompletion: @escaping(_ success: Bool, _ error: Error?) -> Void){
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
@@ -27,7 +27,7 @@ class AuthService{
     
     func loginUser(withEmial email: String, Password password: String, loginCompletion: @escaping(_ success: Bool, _ error: Error?) -> Void){
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
-            guard (authResult?.user) != nil else {
+            if error != nil{
                 loginCompletion(false, error)
                 return
             }

@@ -38,4 +38,13 @@ class DataService{
         REF_USERS.child(uid).updateChildValues(userData)
     }
     
+    func uploadPost(withMessage msg: String, forUID uid: String, withGroupKey groupKey: String?, sendCompletion: @escaping(_ success: Bool) -> Void){
+        if groupKey != nil{
+            // send to group ref
+        } else {
+            REF_FEED.childByAutoId().updateChildValues(["content": msg, "senderId": uid])
+            sendCompletion(true )
+        }
+    }
+    
 }
