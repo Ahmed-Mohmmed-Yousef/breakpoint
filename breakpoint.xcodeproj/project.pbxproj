@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		2429961922EDFBDE000DE8E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2429961822EDFBDE000DE8E7 /* Assets.xcassets */; };
 		2429961C22EDFBDE000DE8E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2429961A22EDFBDE000DE8E7 /* LaunchScreen.storyboard */; };
 		2429962A22EDFDC7000DE8E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2429962922EDFDC7000DE8E7 /* GoogleService-Info.plist */; };
+		24C6568522EE017B00D344CF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C6568422EE017B00D344CF /* DataService.swift */; };
+		24C6568722EEDDF100D344CF /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C6568622EEDDF100D344CF /* AuthVC.swift */; };
+		24C6568922EEDE0600D344CF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C6568822EEDE0600D344CF /* LoginVC.swift */; };
+		24C6568B22EEDE4400D344CF /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C6568A22EEDE4400D344CF /* InsetTextField.swift */; };
+		24C6568D22EEE47000D344CF /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C6568C22EEE47000D344CF /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		2429961B22EDFBDE000DE8E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2429961D22EDFBDE000DE8E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2429962922EDFDC7000DE8E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		24C6568422EE017B00D344CF /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		24C6568622EEDDF100D344CF /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		24C6568822EEDE0600D344CF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		24C6568A22EEDE4400D344CF /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
+		24C6568C22EEE47000D344CF /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		BBF309BF773896E2B4E7EAA9 /* Pods-breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.debug.xcconfig"; path = "Target Support Files/Pods-breakpoint/Pods-breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB2480A531396A54AC30769 /* Pods_breakpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,8 +81,6 @@
 				2429962422EDFC09000DE8E7 /* View */,
 				2429962322EDFBFB000DE8E7 /* Controller */,
 				2429960F22EDFBDC000DE8E7 /* AppDelegate.swift */,
-				2429961122EDFBDC000DE8E7 /* FirstViewController.swift */,
-				2429961322EDFBDC000DE8E7 /* SecondViewController.swift */,
 				2429961522EDFBDC000DE8E7 /* Main.storyboard */,
 				2429961822EDFBDE000DE8E7 /* Assets.xcassets */,
 				2429961A22EDFBDE000DE8E7 /* LaunchScreen.storyboard */,
@@ -85,6 +93,10 @@
 		2429962322EDFBFB000DE8E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2429961122EDFBDC000DE8E7 /* FirstViewController.swift */,
+				2429961322EDFBDC000DE8E7 /* SecondViewController.swift */,
+				24C6568622EEDDF100D344CF /* AuthVC.swift */,
+				24C6568822EEDE0600D344CF /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,6 +104,8 @@
 		2429962422EDFC09000DE8E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				24C6568A22EEDE4400D344CF /* InsetTextField.swift */,
+				24C6568C22EEE47000D344CF /* ShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +127,7 @@
 		2429962822EDFC27000DE8E7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				24C6568422EE017B00D344CF /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -123,7 +138,6 @@
 				BBF309BF773896E2B4E7EAA9 /* Pods-breakpoint.debug.xcconfig */,
 				12A651393F8E4AE40CD341AF /* Pods-breakpoint.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -251,9 +265,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C6568722EEDDF100D344CF /* AuthVC.swift in Sources */,
 				2429961422EDFBDC000DE8E7 /* SecondViewController.swift in Sources */,
+				24C6568922EEDE0600D344CF /* LoginVC.swift in Sources */,
 				2429961022EDFBDC000DE8E7 /* AppDelegate.swift in Sources */,
+				24C6568D22EEE47000D344CF /* ShadowView.swift in Sources */,
 				2429961222EDFBDC000DE8E7 /* FirstViewController.swift in Sources */,
+				24C6568B22EEDE4400D344CF /* InsetTextField.swift in Sources */,
+				24C6568522EE017B00D344CF /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
