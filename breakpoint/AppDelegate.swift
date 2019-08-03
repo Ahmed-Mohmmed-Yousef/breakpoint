@@ -8,23 +8,49 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
+import FBSDKCoreKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
+        // GOOGLE SIGNIN
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        
+        // FACEBOOK SIGNIN
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        
         if Auth.auth().currentUser == nil{
             let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
             let authVC = sb.instantiateViewController(withIdentifier: String(describing: AuthVC.self))
             window?.makeKeyAndVisible()
-             window?.rootViewController?.present(authVC, animated: true, completion: nil )
+            window?.rootViewController?.present(authVC, animated: true, completion: nil )
         }
         return true
+    }
+    
+    //  google protocol func
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error != nil {
+            return
+        }
+        guard let authentication = user.authentication else { return }
+        _ = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let returnGoogle =  GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,annotation: [:])
+        let returnFB = ApplicationDelegate.shared.application(app, open: url, options: options)
+        return returnFB || returnGoogle
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
